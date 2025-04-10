@@ -1,14 +1,27 @@
 
-***🧠 Research Paper Summarization – Multi-Agent System***
+# 🧠 Research Paper Summarization – Multi-Agent System
+
+
 	-A multi-agent system that automates the discovery, processing, summarization, and podcast generation of academic research papers. Built to help users stay updated on research across disciplines efficiently.
-***📌 Features***
+
+
+## 📌 Features
+
+
 •	🔍 Search for research papers via topic, URL, DOI, or PDF uploads
+
+
 •	🧠 Extract and process content from academic papers
+
 •	🗂️ Classify papers by topic
+
 •	✍️ Summarize individual papers and synthesize across topics
+
 •	🎧 Generate audio podcast versions of summaries
+
 •	📎 Include citation tracking in summaries
-***Agent Role:***
+
+## Agent Role:
 •	🔍 Discovery Agent   Searches papers via topic, DOI, URL
 •	📄 Extraction Agent	  Extracts metadata, abstract, and body content
 •	🏷️ Classification Agent  Categorizes paper using user-defined topic list
