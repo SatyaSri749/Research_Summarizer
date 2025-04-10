@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Research Paper Summarizer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function showLoader() {
+      document.getElementById('loader').classList.remove('hidden');
+      document.getElementById('form-content').classList.add('hidden');
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-br from-purple-200 via-indigo-100 to-blue-200 min-h-screen flex items-center justify-center font-sans">
+
+  <div class="backdrop-blur-md bg-white/80 shadow-2xl rounded-2xl p-10 w-full max-w-2xl border border-gray-200">
+    <h1 class="text-4xl font-extrabold text-center text-indigo-700 mb-8 tracking-tight drop-shadow-md">📘 Research Paper Summarizer</h1>
+
+    <form action="/upload" method="post" enctype="multipart/form-data" onsubmit="showLoader()" class="space-y-6" id="form-content">
+      
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">Upload PDF</label>
+        <input type="file" name="file" 
+               class="w-full bg-white/70 backdrop-blur border border-gray-300 p-3 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-400 transition duration-150">
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">Or enter PDF URL</label>
+        <input type="text" name="url" placeholder="https://example.com/paper.pdf"
+               class="w-full bg-white/70 backdrop-blur border border-gray-300 p-3 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-400 transition duration-150">
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">Or enter DOI</label>
+        <input type="text" name="doi" placeholder="10.1234/example.doi"
+               class="w-full bg-white/70 backdrop-blur border border-gray-300 p-3 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-400 transition duration-150">
+      </div>
+
+      <div class="text-center pt-4">
+        <button type="submit"
+                class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold px-8 py-3 rounded-lg shadow-xl transform transition duration-300 hover:scale-105">
+          ✨ Summarize
+        </button>
+      </div>
+    </form>
+
+    <!-- Loader Animation -->
+    <div id="loader" class="hidden text-center mt-6">
+      <p class="text-indigo-600 font-semibold animate-pulse">Processing your request, please wait...</p>
+    </div>
+  </div>
+
+</body>
+</html>
